@@ -1,5 +1,20 @@
 # AI 应用开发
 
+你好，我是 [JavaGuide](https://javaguide.cn/) 的作者。最近几个月一直在继续补充完善 AI 应用开发部分的内容。
+
+目前的话，这份面向后端开发者的 AI 应用开发、AI 编程实战与面试指南已免费开源，涵盖 LLM、Agent、RAG、MCP、Claude Code、Codex 等核心技术与工程实践。对标 [JavaGuide](https://javaguide.cn/home.html)！有帮助的话，欢迎 Star！
+
+- **项目地址**：<https://github.com/Snailclimb/AIGuide>
+- **在线阅读**：<https://javaguide.cn/ai/>
+
+这应该是当前最全面系统的讲解，每一篇都花费了大量时间完善和优化，每篇文章都画了大量配图辅助理解：
+
+![AIGuide 内容概览，大量配图](https://oss.javaguide.cn/github/aiguide/aiguide-overview.png)
+
+发布之后，也是收到了很多读者朋友的好评和推荐。非常感谢，一定会持续用心维护！
+
+![AIGuide 收到了很多读者朋友的好评和推荐](https://oss.javaguide.cn/github/aiguide/ai-guide-received-many-positive-reviews-and-recommendations-from-readers.png)
+
 ## 大模型基础
 
 - [万字拆解 LLM 运行机制](https://javaguide.cn/ai/llm-basis/llm-operation-mechanism.html)：Token、上下文窗口、Temperature 等如何还原成可落地的工程理解？
