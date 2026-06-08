@@ -1,58 +1,93 @@
 # AI 应用开发
 
-你好，我是 [JavaGuide](https://javaguide.cn/) 的作者。最近几个月一直在继续补充完善 AI 应用开发部分的内容。
+你好，我是 [JavaGuide](https://javaguide.cn/) 的作者。最近这段时间，我一直在补 AI 应用开发、AI 编程实战和 AI 面试这几块内容。
 
-目前的话，这份面向后端开发者的 AI 应用开发、AI 编程实战与面试指南已免费开源，涵盖 LLM、Agent、RAG、MCP、Claude Code、Codex 等核心技术与工程实践。对标 [JavaGuide](https://javaguide.cn/home.html)！有帮助的话，欢迎 Star！
+这份开源指南写给所有想系统学习 **AI 应用开发与 AI 工程化落地** 的同学：后端、前端、测试、架构师、技术管理者、产品技术同学都可以看。你不需要先转算法岗，也不需要一上来就啃训练框架和论文公式；这里重点放在 LLM、Agent、RAG、MCP、Prompt、评测、系统设计、Claude Code、Codex 这些做应用时会真正用到的东西。
+
+如果你本来是 Java / Go 后端，会更容易把高并发、缓存、数据库、消息队列、可观测性这些经验迁移过来；如果你是前端、测试或产品技术方向，也可以从 Prompt、RAG、Agent、AI Coding、评测和系统设计切入，理解一个 AI 功能从 Demo 到上线到底要补哪些环节。
 
 - **项目地址**：<https://github.com/Snailclimb/AIGuide>
 - **在线阅读**：<https://javaguide.cn/ai/>
+- **AI 编程专题**：<https://javaguide.cn/ai-coding/>
 
-这应该是当前最全面系统的讲解，每一篇都花费了大量时间完善和优化，每篇文章都画了大量配图辅助理解：
+目前每篇文章都会尽量配上真实工程场景、关键参数、踩坑点和图解。内容还在持续更新，有帮助的话欢迎 Star，也欢迎提 Issue 一起补充。
 
 ![AIGuide 内容概览，大量配图](https://oss.javaguide.cn/github/aiguide/aiguide-overview.png)
 
-发布之后，也是收到了很多读者朋友的好评和推荐。非常感谢，一定会持续用心维护！
+发布之后，收到了不少读者朋友的反馈和推荐。感谢大家，我会继续维护。
 
 ![AIGuide 收到了很多读者朋友的好评和推荐](https://oss.javaguide.cn/github/aiguide/ai-guide-received-many-positive-reviews-and-recommendations-from-readers.png)
 
+## 怎么读
+
+如果你是第一次系统学 AI 应用开发，建议按这个顺序走：
+
+1. 先看 **大模型基础**：把 Token、上下文窗口、采样参数、API 调用、结构化输出和评测搞清楚。
+2. 再看 **RAG**：企业知识库问答最常见，坑也最多，文档处理、向量检索、更新链路和评测都得补。
+3. 接着看 **AI Agent**：重点理解 Tool Calling、Memory、MCP、Skills、Workflow / Graph / Loop。
+4. 最后看 **AI 系统设计**：把 Demo 放进生产环境，处理网关、限流、fallback、成本、观测、安全和灰度。
+
+AI Coding 不是另一条完全独立的线。它更像是日常研发方式的升级，写业务代码、改前端页面、补测试、做重构、查线上问题都能用。建议一边学 AI 应用开发，一边用 Claude Code、Codex、Cursor、Trae 这类工具练起来。
+
+## 面试题
+
+- [AI 应用开发面试指南](https://javaguide.cn/ai/interview-questions/ai-interview-guide.html)：把 LLM、RAG、Agent、系统设计这几条线串起来，适合系统复盘。
+- [大模型基础面试题总结](https://javaguide.cn/ai/interview-questions/llm-interview-questions.html)：Token、上下文窗口、结构化输出、模型调用等高频问题。
+- [AI Agent 面试题总结](https://javaguide.cn/ai/interview-questions/agent-interview-questions.html)：Agent Loop、Tool Calling、Memory、MCP、工作流编排等问题。
+- [RAG 面试题总结](https://javaguide.cn/ai/interview-questions/rag-interview-questions.html)：Embedding、向量数据库、混合检索、Rerank、GraphRAG、RAG 评测。
+- [AI 系统设计面试题总结](https://javaguide.cn/ai/interview-questions/ai-system-design-interview-questions.html)：AI 应用架构、模型网关、成本控制、可观测、安全合规。
+
 ## 大模型基础
 
-- [万字拆解 LLM 运行机制](https://javaguide.cn/ai/llm-basis/llm-operation-mechanism.html)：Token、上下文窗口、Temperature 等如何还原成可落地的工程理解？
-- [大模型 API 调用工程实践](https://javaguide.cn/ai/llm-basis/llm-api-engineering.html)：流式输出、重试、限流与结构化返回的 Java 后端落地
-- [大模型结构化输出详解](https://javaguide.cn/ai/llm-basis/structured-output-function-calling.html)：JSON Schema、Function Calling、Tool Calling 与 MCP 的工程落地
+- [LLM 运行机制：Token、上下文窗口与采样参数怎么影响输出](https://javaguide.cn/ai/llm-basis/llm-operation-mechanism.html)：把 Token、上下文窗口、Temperature、Top-p、Max Tokens 这些基础概念讲透。
+- [大模型 API 调用工程实践：流式输出、重试、限流与结构化返回](https://javaguide.cn/ai/llm-basis/llm-api-engineering.html)：从 Hello World 走到生产可用，重点看 SSE、超时、重试、取消、幂等和异常处理。
+- [大模型结构化输出：从 JSON 契约到 Function Calling 落地](https://javaguide.cn/ai/llm-basis/structured-output-function-calling.html)：JSON Schema、Structured Outputs、Function Calling、MCP Tool 和服务端校验怎么配合。
+- [AI 应用评测体系：从 Golden Set 构建到线上灰度闭环](https://javaguide.cn/ai/llm-basis/llm-evaluation.html)：不要靠体感上线，学会用 Golden Set、LLM-as-Judge、Trace 回放和 CI 回归评估 AI 功能。
 
 ## AI Agent
 
-- [一文搞懂 AI Agent 核心概念](https://javaguide.cn/ai/agent/agent-basis.html)：梳理 AI Agent 六代进化史，掌握 Agent Loop、Context Engineering、Tools 注册等核心概念
-- [AI Agent 记忆系统详解](https://javaguide.cn/ai/agent/agent-memory.html)：短期记忆与长期记忆设计，掌握记忆存储形式、生命周期操作与生产级工程优化策略
-- [大模型提示词工程实践指南](https://javaguide.cn/ai/agent/prompt-engineering.html)：掌握 Prompt 四要素框架、六大核心技巧及企业级安全实践
-- [上下文工程实战指南](https://javaguide.cn/ai/agent/context-engineering.html)：深入理解 Context Engineering 核心概念，掌握静态规则编排、动态信息挂载、Token 预算降级等关键技术
-- [万字详解 Agent Skills](https://javaguide.cn/ai/agent/skills.html)：深入理解 Skills 的设计理念，掌握 Skills 与 Prompt、MCP、Function Calling 的本质区别
-- [万字拆解 MCP 协议](https://javaguide.cn/ai/agent/mcp.html)：理解 MCP 协议的核心概念、架构设计和生产级最佳实践
-- [一文搞懂 Harness Engineering](https://javaguide.cn/ai/agent/harness-engineering.html)：深度解析 Harness 六层架构、上下文管理，拆解 OpenAI、Anthropic、Stripe 等一线团队的 Agent 工程化实战经验
-- [AI 工作流中的 Workflow、Graph 与 Loop](https://javaguide.cn/ai/agent/workflow-graph-loop.html)：理解 AI 工作流中三种核心编排模式的原理与适用场景
+- [AI Agent 核心概念：Agent Loop、Plan-and-Execute、A2A、Agentic Workflows、Tools 注册](https://javaguide.cn/ai/agent/agent-basis.html)：先搞清 Agent 到底比普通 LLM 调用多了什么。
+- [AI Agent 记忆系统：短期记忆、长期记忆与记忆演化机制](https://javaguide.cn/ai/agent/agent-memory.html)：短期记忆、长期记忆、Markdown 记忆、记忆写入和检索怎么落地。
+- [大模型提示词工程（Prompt Engineering）是什么？提示词技巧有哪些？](https://javaguide.cn/ai/agent/prompt-engineering.html)：Prompt 四要素、Few-Shot、CoT、Prompt Injection 防御和结构化输出。
+- [上下文工程(Context Engineering) 是什么？和 Prompt Engineering 有什么区别？](https://javaguide.cn/ai/agent/context-engineering.html)：重点看上下文组装、Token 预算、动态信息挂载和降级策略。
+- [Agent Skills 是什么？和 Prompt、MCP 到底差在哪？](https://javaguide.cn/ai/agent/skills.html)：理解 Skills 的触发方式、延迟加载、渐进式披露和工程边界。
+- [什么是 Model Context Protocol (MCP)？和 Function Calling、Agent 什么关系？](https://javaguide.cn/ai/agent/mcp.html)：MCP 的 Host、Client、Server、Tools、Resources、Prompts 分别做什么。
+- [一文搞懂 Harness Engineering：六层架构、上下文管理与一线团队实战](https://javaguide.cn/ai/agent/harness-engineering.html)：看 Agent 外面那层工程外壳怎么管上下文、工具、状态、评测和安全。
+- [AI 工作流中的 Workflow、Graph 与 Loop：从概念到实现](https://javaguide.cn/ai/agent/workflow-graph-loop.html)：用工作流、图和循环把 Agent 的不确定性关进可控边界里。
 
 ## RAG（检索增强生成）
 
-- [万字详解 RAG 基础概念](https://javaguide.cn/ai/rag/rag-basis.html)：RAG 是什么？为什么需要 RAG？RAG 的核心优势和局限性是什么？
-- [万字详解 RAG 向量索引算法和向量数据库](https://javaguide.cn/ai/rag/rag-vector-store.html)：HNSW、IVFFLAT 等索引算法的原理是什么？如何选择合适的向量数据库？
-- [万字详解 GraphRAG](https://javaguide.cn/ai/rag/graphrag.html)：知识图谱驱动的 RAG，深入理解实体、关系、社区发现、全局检索与局部检索
-- [万字详解 RAG 检索优化](https://javaguide.cn/ai/rag/rag-optimization.html)：Chunk 策略、Hybrid Search、Query Rewrite、Rerank、上下文压缩等实战优化
+- [万字详解 RAG 基础概念](https://javaguide.cn/ai/rag/rag-basis.html)：RAG 是什么，为什么需要它，和长上下文、微调、传统搜索怎么选。
+- [RAG 文档处理与切分策略：从解析、清洗、Chunking 到多模态内容处理](https://javaguide.cn/ai/rag/rag-document-processing.html)：RAG 效果上限经常卡在文档处理，PDF、表格、图片、Chunking 都要处理好。
+- [万字详解 RAG 向量索引算法和向量数据库](https://javaguide.cn/ai/rag/rag-vector-store.html)：HNSW、IVFFLAT、pgvector、Milvus、Elasticsearch 等怎么选。
+- [RAG 知识库文档如何更新：增量更新、版本控制、去重与全量重建](https://javaguide.cn/ai/rag/rag-knowledge-update.html)：文档变更后怎么同步、去重、回滚、灰度和监控。
+- [万字详解 GraphRAG：为什么只靠向量检索撑不起复杂知识问答](https://javaguide.cn/ai/rag/graphrag.html)：实体、关系、社区发现、局部检索、全局检索和 Text2Cypher。
+- [万字详解 RAG 优化：从召回、重排到上下文工程的系统调优](https://javaguide.cn/ai/rag/rag-optimization.html)：Query Rewrite、Hybrid Search、Rerank、上下文压缩、失败样本定位。
+
+## AI 系统设计
+
+- [AI 应用系统设计：从 Prompt Demo 到生产级架构](https://javaguide.cn/ai/system-design/ai-application-architecture.html)：把 Prompt Demo 放进真实业务系统，补齐 Prompt 管理、模型网关、RAG、Memory、Tool、评测和安全。
+- [大模型网关详解：多模型路由、fallback、限流与成本控制](https://javaguide.cn/ai/system-design/llm-gateway.html)：多供应商适配、模型路由、fallback、限流配额、Token 预算、成本归因和审计。
+- [AI 语音技术详解：从 ASR、TTS 到实时语音 Agent 的工程化落地](https://javaguide.cn/ai/system-design/ai-voice.html)：ASR、TTS、VAD、打断处理、低延迟优化和实时语音 Agent。
 
 ## AI 编程实战
 
-⭐️ **AI 编程专栏**：[https://javaguide.cn/ai-coding/](https://javaguide.cn/ai-coding/)
-
-- [IDEA + Qoder 插件多场景实战](https://javaguide.cn/ai-coding/idea-qoder-plugin.html)：通过深分页优化、祖传代码重构两个真实案例，展示 AI 辅助编程的实战效果
-- [Trae + MiniMax 多场景实战](https://javaguide.cn/ai-coding/trae-m2.7.html)：使用 Trae IDE 接入 MiniMax 大模型，通过 Redis 故障排查和跨语言重构场景分享 AI 辅助编程实战经验
-- [Claude Code 接入第三方模型实战](https://javaguide.cn/ai-coding/cc-glm5.1.html)：通过 Claude Code 接入 GLM-5.1，完成 JVM 智能诊断助手搭建和百万级数据量慢查询治理
-- [DeepSeek V4 + Claude Code 实战](https://javaguide.cn/ai-coding/deepseek-v4-claude-code.html)：深入体验 DeepSeek V4 与 Claude Code 的集成，实测代码审计、Flyway 集成、多模型协同等场景
+- [IDEA + Qoder 插件多场景实战：接口优化与代码重构](https://javaguide.cn/ai-coding/cases/idea-qoder-plugin.html)：JetBrains 用户怎么在 IDEA 里用 AI 做接口优化和代码重构。
+- [Trae + MiniMax 多场景实战：Redis 故障排查与跨语言重构](https://javaguide.cn/ai-coding/cases/trae-m2.7.html)：用 Trae 接入大模型，处理 Redis 问题和跨语言改造。
+- [Claude Code 接入第三方模型实战：JVM 智能诊断与慢查询治理](https://javaguide.cn/ai-coding/cases/cc-glm5.1.html)：Claude Code 接入 GLM-5.1，做 JVM 诊断和慢 SQL 治理。
+- [DeepSeek V4 + Claude Code 实战：代码能力深度测评](https://javaguide.cn/ai-coding/cases/deepseek-v4-claude-code.html)：看 DeepSeek V4 在代码审计、数据库迁移、多模型协作里的表现。
+- [MiniMax M3 + Claude Code 实战：Redis 故障排查、SCAN 算法复刻与监控面板搭建](https://javaguide.cn/ai-coding/cases/cc-m3.html)：用长上下文和编码模型处理更完整的工程任务。
+- [IDEA 爽用 Claude Code 和 Codex 的终极方案，很丝滑！](https://javaguide.cn/ai-coding/project/cc-guide.html)：JetBrains 里接 Claude Code / Codex GUI 的实践。
 
 ## AI 编程技巧
 
-- [AI 编程必备 Skills 推荐](https://javaguide.cn/ai-coding/programmer-essential-skills.html)：实战分享 6 个 AI 编程 Skills，覆盖 TDD 开发流程、代码审查、UI 设计、网页自动化与 Skill 开发
-- [Claude Code 核心命令详解](https://javaguide.cn/ai-coding/claudecode-commands.html)：深入解析 /simplify、/review、/loop、/batch 等核心命令的使用方法与实战技巧
-- [Claude Code 使用指南](https://javaguide.cn/ai-coding/claudecode-tips.html)：整理自 Anthropic 官方技术文档并融合实战经验，系统梳理 Claude Code 的使用技巧
-- [OpenAI Codex 最佳实践指南](https://javaguide.cn/ai-coding/codex-best-practices.html)：综合官方文档与实战经验，系统梳理 Codex 的提示工程、工具配置与安全策略
-- [AI 编程选 CLI 还是 IDE？](https://javaguide.cn/ai-coding/cli-vs-ide.html)：深度对比 Claude Code、Cursor、Kiro、TRAE 等主流 AI 编程工具，解析 CLI 与 IDE 的核心差异与选型建议
-- [AI 编程开放性面试题](https://javaguide.cn/ai-coding/ai-ide.html)：涵盖 Cursor、Claude Code 等 AI 编程 IDE 使用技巧，以及 AI 对后端开发影响等高频面试问题
+- [Vibe Coding 实用技巧总结：Git、Spec、上下文管理与多 Agent 协作](https://javaguide.cn/ai-coding/practices/the-cool-tricks-for-vibe-coding.html)：从 Git、Spec、上下文、任务拆分和多 Agent 协作几个角度讲怎么少踩坑。
+- [Claude Code 使用指南：配置、工作流与进阶技巧](https://javaguide.cn/ai-coding/practices/claudecode-tips.html)：Claude Code 的配置、常用工作流、Sub-Agent、多实例协作和上下文管理。
+- [CLAUDE.md 最佳实践：该写什么、不该写什么、项目变大后怎么拆](https://javaguide.cn/ai-coding/practices/claude-md-best-practices.html)：把项目规则写给 AI 看，避免每次都从零解释仓库。
+- [Claude Code 核心命令详解：simplify、code-review、loop、batch、run、verify](https://javaguide.cn/ai-coding/practices/claudecode-commands.html)：常用命令怎么用，适合哪些任务，边界在哪里。
+- [AI 编程必备 Skills 推荐：TDD、代码审查与网页自动化实战](https://javaguide.cn/ai-coding/practices/programmer-essential-skills.html)：推荐一批能直接改善 AI 编程体验的 Skills。
+- [Codex 使用指南：配置、AGENTS.md 与 Agentic 工作流](https://javaguide.cn/ai-coding/practices/codex-best-practices.html)：Codex 的配置、AGENTS.md、任务拆解、验证和安全边界。
+- [AI 编程选 CLI 还是 IDE？一文帮你彻底搞清楚](https://javaguide.cn/ai-coding/practices/cli-vs-ide.html)：Claude Code、Codex、Cursor、Trae、Qoder 这类工具怎么选。
+- [Claude Code Agent View：多会话并行管理实战](https://javaguide.cn/ai-coding/practices/claudecode-agentview.html)：多个 Agent 会话并行时，怎么管理状态、权限确认和任务进度。
+- [10 道 AI 编程相关的开放性面试问题](https://javaguide.cn/ai-coding/practices/ai-ide.html)：Cursor、Claude Code、Skills、Spec Coding、AI 对开发工作的影响等问题。
+- [Spec Coding 规范驱动编程实战：从 Vibe Coding 到 AI 代码规范](https://javaguide.cn/ai-coding/practices/spec-coding.html)：用 Spec 把需求、约束、验收标准写清楚，再让 AI 动手。
