@@ -29,8 +29,16 @@
 
 AI Coding 不是另一条完全独立的线。它更像是日常研发方式的升级，写业务代码、改前端页面、补测试、做重构、查线上问题都能用。建议一边学 AI 应用开发，一边用 Claude Code、Codex、Cursor、Trae 这类工具练起来。
 
+## 学习路线与建议
+
+- [学习路线合集（2026 最新版）](https://javaguide.cn/roadmap/)：统一整理 Java 后端、AI 应用开发、AI Agent 和全栈方向的系统学习建议。
+- [Java/Go 开发者 AI 应用开发与 Agent 学习路线（2026 最新版）](https://javaguide.cn/roadmap/java-to-ai-roadmap.html)：面向后端开发者，按大模型基础、LLM API、Prompt、RAG、Agent、工程化和项目实战拆解学习路径。
+- [后端开发者转型 AI Agent 学习建议（2026 最新版）](https://javaguide.cn/roadmap/backend-to-ai-agent-roadmap.html)：先判断是否适合转型，再看 Java AI 与 Python AI 怎么选、能投什么岗位、应该如何学习。
+- [后端开发者全栈学习路线（2026 最新版）：AI 时代如何补齐前端和交付能力](https://javaguide.cn/roadmap/full-stack-roadmap.html)：结合 AI 编程工具，补齐前端、接口联调、权限、部署和独立交付能力。
+
 ## 面试题
 
+- [AI 应用开发面试题专题](https://javaguide.cn/ai/interview-questions/)：按大模型基础、AI Agent、RAG 和 AI 系统设计组织复习路线。
 - [AI 应用开发面试指南](https://javaguide.cn/ai/interview-questions/ai-interview-guide.html)：把 LLM、RAG、Agent、系统设计这几条线串起来，适合系统复盘。
 - [大模型基础面试题总结](https://javaguide.cn/ai/interview-questions/llm-interview-questions.html)：Token、上下文窗口、结构化输出、模型调用等高频问题。
 - [AI Agent 面试题总结](https://javaguide.cn/ai/interview-questions/agent-interview-questions.html)：Agent Loop、Tool Calling、Memory、MCP、工作流编排等问题。
@@ -39,6 +47,7 @@ AI Coding 不是另一条完全独立的线。它更像是日常研发方式的�
 
 ## 大模型基础
 
+- [大模型基础专题](https://javaguide.cn/ai/llm-basis/)：从模型运行机制、API 调用、结构化输出到 AI 应用评测，先把调用链路看明白。
 - [LLM 运行机制：Token、上下文窗口与采样参数怎么影响输出](https://javaguide.cn/ai/llm-basis/llm-operation-mechanism.html)：把 Token、上下文窗口、Temperature、Top-p、Max Tokens 这些基础概念讲透。
 - [大模型 API 调用工程实践：流式输出、重试、限流与结构化返回](https://javaguide.cn/ai/llm-basis/llm-api-engineering.html)：从 Hello World 走到生产可用，重点看 SSE、超时、重试、取消、幂等和异常处理。
 - [大模型结构化输出：从 JSON 契约到 Function Calling 落地](https://javaguide.cn/ai/llm-basis/structured-output-function-calling.html)：JSON Schema、Structured Outputs、Function Calling、MCP Tool 和服务端校验怎么配合。
@@ -46,6 +55,7 @@ AI Coding 不是另一条完全独立的线。它更像是日常研发方式的�
 
 ## AI Agent
 
+- [AI Agent 专题](https://javaguide.cn/ai/agent/)：从 Agent 基础概念、Memory、Prompt、Context 到 MCP、Skills 和 Harness Engineering。
 - [AI Agent 核心概念：Agent Loop、Plan-and-Execute、A2A、Agentic Workflows、Tools 注册](https://javaguide.cn/ai/agent/agent-basis.html)：先搞清 Agent 到底比普通 LLM 调用多了什么。
 - [AI Agent 记忆系统：短期记忆、长期记忆与记忆演化机制](https://javaguide.cn/ai/agent/agent-memory.html)：短期记忆、长期记忆、Markdown 记忆、记忆写入和检索怎么落地。
 - [大模型提示词工程（Prompt Engineering）是什么？提示词技巧有哪些？](https://javaguide.cn/ai/agent/prompt-engineering.html)：Prompt 四要素、Few-Shot、CoT、Prompt Injection 防御和结构化输出。
@@ -57,6 +67,7 @@ AI Coding 不是另一条完全独立的线。它更像是日常研发方式的�
 
 ## RAG（检索增强生成）
 
+- [RAG 专题](https://javaguide.cn/ai/rag/)：围绕企业知识库问答，梳理文档处理、向量数据库、GraphRAG、检索优化和知识库更新。
 - [万字详解 RAG 基础概念](https://javaguide.cn/ai/rag/rag-basis.html)：RAG 是什么，为什么需要它，和长上下文、微调、传统搜索怎么选。
 - [RAG 文档处理与切分策略：从解析、清洗、Chunking 到多模态内容处理](https://javaguide.cn/ai/rag/rag-document-processing.html)：RAG 效果上限经常卡在文档处理，PDF、表格、图片、Chunking 都要处理好。
 - [万字详解 RAG 向量索引算法和向量数据库](https://javaguide.cn/ai/rag/rag-vector-store.html)：HNSW、IVFFLAT、pgvector、Milvus、Elasticsearch 等怎么选。
@@ -66,17 +77,20 @@ AI Coding 不是另一条完全独立的线。它更像是日常研发方式的�
 
 ## AI 系统设计
 
+- [AI 系统设计专题](https://javaguide.cn/ai/system-design/)：把 Prompt Demo 放进真实后端系统里看，重点关注架构、模型网关、语音链路、可观测、评测和安全治理。
 - [AI 应用系统设计：从 Prompt Demo 到生产级架构](https://javaguide.cn/ai/system-design/ai-application-architecture.html)：把 Prompt Demo 放进真实业务系统，补齐 Prompt 管理、模型网关、RAG、Memory、Tool、评测和安全。
 - [大模型网关详解：多模型路由、fallback、限流与成本控制](https://javaguide.cn/ai/system-design/llm-gateway.html)：多供应商适配、模型路由、fallback、限流配额、Token 预算、成本归因和审计。
 - [AI 语音技术详解：从 ASR、TTS 到实时语音 Agent 的工程化落地](https://javaguide.cn/ai/system-design/ai-voice.html)：ASR、TTS、VAD、打断处理、低延迟优化和实时语音 Agent。
 
 ## AI 编程实战
 
+- [AI 编程实践指南](https://javaguide.cn/ai-coding/)：系统整理 Claude Code、Codex、AI IDE、CLI Agent、上下文管理和 AI 辅助开发工作流。
 - [IDEA + Qoder 插件多场景实战：接口优化与代码重构](https://javaguide.cn/ai-coding/cases/idea-qoder-plugin.html)：JetBrains 用户怎么在 IDEA 里用 AI 做接口优化和代码重构。
 - [Trae + MiniMax 多场景实战：Redis 故障排查与跨语言重构](https://javaguide.cn/ai-coding/cases/trae-m2.7.html)：用 Trae 接入大模型，处理 Redis 问题和跨语言改造。
 - [Claude Code 接入第三方模型实战：JVM 智能诊断与慢查询治理](https://javaguide.cn/ai-coding/cases/cc-glm5.1.html)：Claude Code 接入 GLM-5.1，做 JVM 诊断和慢 SQL 治理。
 - [DeepSeek V4 + Claude Code 实战：代码能力深度测评](https://javaguide.cn/ai-coding/cases/deepseek-v4-claude-code.html)：看 DeepSeek V4 在代码审计、数据库迁移、多模型协作里的表现。
 - [MiniMax M3 + Claude Code 实战：Redis 故障排查、SCAN 算法复刻与监控面板搭建](https://javaguide.cn/ai-coding/cases/cc-m3.html)：用长上下文和编码模型处理更完整的工程任务。
+- [Claude Desktop 接入第三方模型实战：用 CC Switch 打通 DeepSeek](https://javaguide.cn/ai-coding/cases/claude-desktop-cc-switch.html)：用 CC Switch 接管 Claude Desktop 的本地代理配置，拆解模型映射、协议转换和故障转移。
 - [IDEA 爽用 Claude Code 和 Codex 的终极方案，很丝滑！](https://javaguide.cn/ai-coding/project/cc-guide.html)：JetBrains 里接 Claude Code / Codex GUI 的实践。
 
 ## AI 编程技巧
