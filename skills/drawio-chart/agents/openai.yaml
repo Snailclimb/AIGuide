@@ -1,0 +1,7 @@
+interface:
+  display_name: "Draw.io 配图专家"
+  short_description: "生成专业 draw.io 图表，并支持导出 PNG/SVG/PDF"
+  default_prompt: "Use $drawio-chart to create a draw.io diagram for this topic and export it in the format I need."
+
+policy:
+  allow_implicit_invocation: true

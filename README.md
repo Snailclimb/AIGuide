@@ -18,6 +18,27 @@
 
 ![AIGuide 收到了很多读者朋友的好评和推荐](https://oss.javaguide.cn/github/aiguide/ai-guide-received-many-positive-reviews-and-recommendations-from-readers.png)
 
+## Agent Skills
+
+AIGuide 仓库里也会同步维护一部分可直接安装的 Agent Skill，目前已提供：
+
+- `drawio-chart`：根据需求生成专业的 draw.io 图表，支持流程图、架构图、时序图、ER 图等，并可导出为 PNG/SVG/PDF。
+- `java-coding-standards`：为 Java / Spring Boot 项目提供分层架构、编码风格、事务、异常、日志、性能与测试方面的工程规范。
+
+安装方式：
+
+```bash
+npx skills add Snailclimb/AIGuide --path skills/drawio-chart
+```
+
+如果你主要在 Codex 里使用，也可以直接从 GitHub 安装：
+
+```bash
+python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
+  --repo Snailclimb/AIGuide \
+  --path skills/drawio-chart
+```
+
 ## 怎么读
 
 如果你是第一次系统学 AI 应用开发，建议按这个顺序走：

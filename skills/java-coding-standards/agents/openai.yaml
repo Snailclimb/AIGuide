@@ -1,0 +1,7 @@
+interface:
+  display_name: "Java 编码规范"
+  short_description: "审查和约束 Java/Spring Boot 工程代码"
+  default_prompt: "Use $java-coding-standards to review this Java/Spring Boot change for architecture, style, transactions, and tests."
+
+policy:
+  allow_implicit_invocation: true
