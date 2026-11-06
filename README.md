@@ -56,6 +56,7 @@ AI Coding 不是另一条完全独立的线。它更像是日常研发方式的�
 - [Java/Go 开发者 AI 应用开发与 Agent 学习路线（2026 最新版）](https://javaguide.cn/roadmap/java-to-ai-roadmap.html)：面向后端开发者，按大模型基础、LLM API、Prompt、RAG、Agent、工程化和项目实战拆解学习路径。
 - [后端开发者转型 AI Agent 学习建议（2026 最新版）](https://javaguide.cn/roadmap/backend-to-ai-agent-roadmap.html)：先判断是否适合转型，再看 Java AI 与 Python AI 怎么选、能投什么岗位、应该如何学习。
 - [后端开发者全栈学习路线（2026 最新版）：AI 时代如何补齐前端和交付能力](https://javaguide.cn/roadmap/full-stack-roadmap.html)：结合 AI 编程工具，补齐前端、接口联调、权限、部署和独立交付能力。
+- [AI 核心概念总览：LLM、Agent、RAG、MCP 与系统设计](https://javaguide.cn/ai/ai-core-concepts.html)：串联大模型、Agent、RAG、MCP、评测与系统设计，建立整体知识框架。
 
 ## 面试题
 
@@ -65,6 +66,7 @@ AI Coding 不是另一条完全独立的线。它更像是日常研发方式的�
 - [AI Agent 面试题总结](https://javaguide.cn/ai/interview-questions/agent-interview-questions.html)：Agent Loop、Tool Calling、Memory、MCP、工作流编排等问题。
 - [RAG 面试题总结](https://javaguide.cn/ai/interview-questions/rag-interview-questions.html)：Embedding、向量数据库、混合检索、Rerank、GraphRAG、RAG 评测。
 - [AI 系统设计面试题总结](https://javaguide.cn/ai/interview-questions/ai-system-design-interview-questions.html)：AI 应用架构、模型网关、成本控制、可观测、安全合规。
+- [Agent 项目面试怎么讲？从系统架构、技术选型到 Badcase 复盘](https://javaguide.cn/ai/interview-questions/agent-project-interview-guide.html)：从系统架构、技术选型、工具治理和评测指标讲到 Badcase 复盘，准备 Agent 项目深挖。
 
 ## 大模型基础
 
@@ -85,6 +87,8 @@ AI Coding 不是另一条完全独立的线。它更像是日常研发方式的�
 - [什么是 Model Context Protocol (MCP)？和 Function Calling、Agent 什么关系？](https://javaguide.cn/ai/agent/mcp.html)：MCP 的 Host、Client、Server、Tools、Resources、Prompts 分别做什么。
 - [一文搞懂 Harness Engineering：六层架构、上下文管理与一线团队实战](https://javaguide.cn/ai/agent/harness-engineering.html)：看 Agent 外面那层工程外壳怎么管上下文、工具、状态、评测和安全。
 - [AI 工作流中的 Workflow、Graph 与 Loop：从概念到实现](https://javaguide.cn/ai/agent/workflow-graph-loop.html)：用工作流、图和循环把 Agent 的不确定性关进可控边界里。
+- [多 Agent 协作系统设计：任务拆分、状态共享、冲突处理与失败恢复](https://javaguide.cn/ai/agent/multi-agent.html)：任务拆分、编排通信、状态共享、冲突处理、失败恢复与协作评测。
+- [Loop Engineering 是什么？为什么说它是新瓶装旧酒？](https://javaguide.cn/ai/agent/loop-engineering.html)：理解代码 Agent 外层循环的触发、上下文、验证、状态和停止条件。
 
 ## RAG（检索增强生成）
 
@@ -95,6 +99,7 @@ AI Coding 不是另一条完全独立的线。它更像是日常研发方式的�
 - [RAG 知识库文档如何更新：增量更新、版本控制、去重与全量重建](https://javaguide.cn/ai/rag/rag-knowledge-update.html)：文档变更后怎么同步、去重、回滚、灰度和监控。
 - [万字详解 GraphRAG：为什么只靠向量检索撑不起复杂知识问答](https://javaguide.cn/ai/rag/graphrag.html)：实体、关系、社区发现、局部检索、全局检索和 Text2Cypher。
 - [万字详解 RAG 优化：从召回、重排到上下文工程的系统调优](https://javaguide.cn/ai/rag/rag-optimization.html)：Query Rewrite、Hybrid Search、Rerank、上下文压缩、失败样本定位。
+- [RAG 评测：从离线数据集到线上可观测性](https://javaguide.cn/ai/rag/rag-evaluation.html)：构建评测集，分别检查检索、生成和拒答质量，并结合版本比较与线上观测指导优化。
 
 ## AI 系统设计
 
@@ -102,6 +107,8 @@ AI Coding 不是另一条完全独立的线。它更像是日常研发方式的�
 - [AI 应用系统设计：从 Prompt Demo 到生产级架构](https://javaguide.cn/ai/system-design/ai-application-architecture.html)：把 Prompt Demo 放进真实业务系统，补齐 Prompt 管理、模型网关、RAG、Memory、Tool、评测和安全。
 - [大模型网关详解：多模型路由、fallback、限流与成本控制](https://javaguide.cn/ai/system-design/llm-gateway.html)：多供应商适配、模型路由、fallback、限流配额、Token 预算、成本归因和审计。
 - [AI 语音技术详解：从 ASR、TTS 到实时语音 Agent 的工程化落地](https://javaguide.cn/ai/system-design/ai-voice.html)：ASR、TTS、VAD、打断处理、低延迟优化和实时语音 Agent。
+- [AI 可观测性与 Trace：如何还原 Agent 的完整执行过程](https://javaguide.cn/ai/system-design/ai-observability.html)：通过 Trace 和 Span 还原 Agent 执行过程，处理上下文传播、采样和敏感数据。
+- [LLM/Agent 安全实战：从 Prompt Injection、工具越权到沙箱隔离](https://javaguide.cn/ai/system-design/llm-security.html)：覆盖 Prompt Injection、工具越权、MCP 授权、敏感数据、沙箱隔离和安全评测。
 
 ## AI 编程实战
 
@@ -111,8 +118,8 @@ AI Coding 不是另一条完全独立的线。它更像是日常研发方式的�
 - [Claude Code 接入第三方模型实战：JVM 智能诊断与慢查询治理](https://javaguide.cn/ai-coding/cases/cc-glm5.1.html)：Claude Code 接入 GLM-5.1，做 JVM 诊断和慢 SQL 治理。
 - [DeepSeek V4 + Claude Code 实战：代码能力深度测评](https://javaguide.cn/ai-coding/cases/deepseek-v4-claude-code.html)：看 DeepSeek V4 在代码审计、数据库迁移、多模型协作里的表现。
 - [MiniMax M3 + Claude Code 实战：Redis 故障排查、SCAN 算法复刻与监控面板搭建](https://javaguide.cn/ai-coding/cases/cc-m3.html)：用长上下文和编码模型处理更完整的工程任务。
-- [Claude Desktop 接入第三方模型实战：用 CC Switch 打通 DeepSeek](https://javaguide.cn/ai-coding/cases/claude-desktop-cc-switch.html)：用 CC Switch 接管 Claude Desktop 的本地代理配置，拆解模型映射、协议转换和故障转移。
 - [IDEA 爽用 Claude Code 和 Codex 的终极方案，很丝滑！](https://javaguide.cn/ai-coding/project/cc-guide.html)：JetBrains 里接 Claude Code / Codex GUI 的实践。
+- [Kimi K3 实战：全栈项目、Java 项目改造与 3A 游戏 Demo](https://javaguide.cn/ai-coding/cases/kimi-k3.html)：通过全栈热点追踪系统、Java 项目改造和游戏 Demo，观察长程任务与复杂工程交付表现。
 
 ## AI 编程技巧
 
@@ -126,3 +133,16 @@ AI Coding 不是另一条完全独立的线。它更像是日常研发方式的�
 - [Claude Code Agent View：多会话并行管理实战](https://javaguide.cn/ai-coding/practices/claudecode-agentview.html)：多个 Agent 会话并行时，怎么管理状态、权限确认和任务进度。
 - [10 道 AI 编程相关的开放性面试问题](https://javaguide.cn/ai-coding/practices/ai-ide.html)：Cursor、Claude Code、Skills、Spec Coding、AI 对开发工作的影响等问题。
 - [Spec Coding 规范驱动编程实战：从 Vibe Coding 到 AI 代码规范](https://javaguide.cn/ai-coding/practices/spec-coding.html)：用 Spec 把需求、约束、验收标准写清楚，再让 AI 动手。
+- [比 iTerm2 更适合 Claude Code/Codex 的终端，我换成 Ghostty 了](https://javaguide.cn/ai-coding/practices/ghostty.html)：配置字体主题、分屏、Quick Terminal 和 Shell Integration，搭好 CLI Agent 的终端工作台。
+- [oh-my-pi 开源终端 AI 编码代理体验](https://javaguide.cn/ai-coding/practices/oh-my-pi.html)：了解 Hashline、LSP/DAP、内置工具、多模型路由和安装配置。
+- [强模型时代，AI 编程 Skills 还有必要装吗？](https://javaguide.cn/ai-coding/practices/skill-selection-and-pruning.html)：结合实际使用判断哪些 Skill 值得保留，以及如何精简 Skill 列表。
+- [mattpocock/skills：我最推荐的 4 个 AI 编程 Skill](https://javaguide.cn/ai-coding/practices/mattpocock-skills.html)：结合案例介绍 grilling、research、diagnosing-bugs 和 code-review 的适用场景。
+- [JavaGuide 专属 draw.io 绘图 Skill 开源：用 Agent 自动生成可编辑的 draw.io 技术图](https://javaguide.cn/ai-coding/practices/drawio-chart-skill.html)：用 Agent 生成可编辑的流程图、架构图和模块关系图，保留可维护的 draw.io 源文件。
+
+## Claude Code 原理进阶
+
+- [Claude Code 上下文管理详解：窗口预算、压缩与长任务治理](https://javaguide.cn/ai-coding/principles/claude-code-context-management.html)：窗口预算、Context Rot、渐进式压缩、Sub-agent 隔离与长任务状态管理。
+- [Claude Code 记忆系统详解：Markdown、Auto Memory 与向量检索怎么选](https://javaguide.cn/ai-coding/principles/claude-code-memory.html)：梳理 CLAUDE.md、规则文件、Auto Memory、Subagent Memory 和第三方记忆插件的分工。
+- [Claude Code Skills 技术实现细节与运行方式](https://javaguide.cn/ai-coding/principles/claude-code-skills.html)：理解 Skills 的文件结构、发现加载、动态上下文、安全限制和 Subagent 配合方式。
+- [Claude Code Hooks 详解：生命周期钩子与自动化工作流](https://javaguide.cn/ai-coding/principles/claude-code-hooks.html)：通过生命周期钩子实现风险拦截、自动格式化、通知与可审计的自动化工作流。
+- [Claude Code Multi-Agent 机制详解：Subagent、Subtask、Fork 与 Agent Teams](https://javaguide.cn/ai-coding/principles/claude-code-multi-agent.html)：区分 Subagent、Subtask、Fork 与 Agent Teams，理解上下文隔离、权限回流和协作成本。
